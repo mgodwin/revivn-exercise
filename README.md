@@ -1,24 +1,14 @@
-# README
+# Revivn Exercise
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting Started
 
-Things you may want to cover:
+This project uses Rails 7 with esbuild, with ruby 3.2.x
 
-* Ruby version
+```
+bin/setup
+bin/dev
+```
 
-* System dependencies
+You should be able to visit the site at http://localhost:3000
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Overview of solution
