@@ -10,5 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_18_120240) do
+  create_table "addresses", force: :cascade do |t|
+    t.string "address_1"
+    t.string "address_2"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pickup_request_activities", force: :cascade do |t|
+    t.string "type"
+    t.text "additional_data"
+    t.integer "pickup_request_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pickup_request_id"], name: "index_pickup_request_activities_on_pickup_request_id"
+  end
+
+  create_table "pickup_requests", force: :cascade do |t|
+    t.date "date"
+    t.string "status"
+    t.integer "address_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["address_id"], name: "index_pickup_requests_on_address_id"
+  end
+
 end
