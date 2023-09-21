@@ -11,6 +11,7 @@ To get started:
 
 ```
 bin/setup
+yarn install
 bin/dev
 ```
 

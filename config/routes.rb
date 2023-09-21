@@ -4,12 +4,11 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  scope format: true, format: :json do
+
+  scope constraints: lambda { |req| req.format == :json } do
     resources :pickup_requests, only: [:index, :create]
   end
 
-
-  
-  root "application#index"
-  get "*" => 'application#index'
+  get "*path" => 'application#index'
+  root to: 'application#index'
 end
