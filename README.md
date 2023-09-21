@@ -2,18 +2,27 @@
 
 ## Getting Started
 
-This project uses Rails 7 with esbuild, with ruby 3.2.x
+This project uses Rails 7 with:
+
+- esbuild 
+- ruby 3.2.x
+
+To get started:
 
 ```
 bin/setup
 bin/dev
 ```
 
-You should be able to visit the site at http://localhost:3000
+You should now be able to visit the site at http://localhost:3000 🎉
 
 ## Overview of solution
 
 ### Domain Model
+
+Customers
+- id
+- name
 
 Pickup Addresses
 - id 
@@ -27,6 +36,7 @@ Pickup Addresses
 
 Pickup Request
 - Id 
+- customer_id
 - Date
 - Address_id # normalizing as we might frequently perform pickups from the same addresses
 - Status # string
